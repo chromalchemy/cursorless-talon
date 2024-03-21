@@ -118,6 +118,14 @@ class Actions:
     def cursorless_ide_command(command_id: str, target: CursorlessTarget):
         """Perform ide command on cursorless target"""
         return cursorless_execute_command_action(command_id, target)
+    
+    def cursorless_ide_command_extra(command_id: str, command_param: str, target: CursorlessTarget):
+        """Perform ide command on cursorless target"""
+        return cursorless_execute_command_action_extra(command_id, command_param, target)
+    
+    def cursorless_repl_snippet(repl_snippet_key: str, target: CursorlessTarget):
+        """Perform calva repl snippet on cursorless target"""
+        return cursorless_execute_command_action_extra("calva.runCustomREPLCommand", target)
 
     def cursorless_insert(
         destination: CursorlessDestination, text: Union[str, list[str]]
