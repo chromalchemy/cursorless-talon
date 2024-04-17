@@ -193,7 +193,8 @@
       "round": "parentheses",
       "skis": "backtickQuotes",
       "box": "squareBrackets",
-      "twin": "singleQuotes"
+      "twin": "singleQuotes",
+      "comment round": "commentedParentheses"
     }
   },
   "special_marks.csv": {
