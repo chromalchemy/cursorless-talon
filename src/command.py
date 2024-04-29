@@ -16,7 +16,7 @@ class CursorlessCommand:
 
 
 CURSORLESS_COMMAND_ID = "cursorless.command"
-last_phrase = None
+last_phrase: dict = {}
 
 mod = Module()
 
@@ -31,7 +31,7 @@ speech_system.register("pre:phrase", on_phrase)
 
 @mod.action_class
 class Actions:
-    def private_cursorless_command_and_wait(action: dict):
+    def private_cursorless_command_and_wait(action: dict):  # pyright: ignore [reportGeneralTypeIssues]
         """Execute cursorless command and wait for it to finish"""
         response = actions.user.private_cursorless_run_rpc_command_get(
             CURSORLESS_COMMAND_ID,
@@ -39,7 +39,7 @@ class Actions:
         )
         if "fallback" in response:
             perform_fallback(response["fallback"])
-
+            
     def private_cursorless_command_and_wait_extra(action: dict):
         """Execute cursorless command and wait for it to finish"""
         actions.user.private_cursorless_run_rpc_command_and_wait(
@@ -47,14 +47,14 @@ class Actions:
             construct_cursorless_command(action),
         )
 
-    def private_cursorless_command_no_wait(action: dict):
+    def private_cursorless_command_no_wait(action: dict):  # pyright: ignore [reportGeneralTypeIssues]
         """Execute cursorless command without waiting"""
         actions.user.private_cursorless_run_rpc_command_no_wait(
             CURSORLESS_COMMAND_ID,
             construct_cursorless_command(action),
         )
 
-    def private_cursorless_command_get(action: dict):
+    def private_cursorless_command_get(action: dict):  # pyright: ignore [reportGeneralTypeIssues]
         """Execute cursorless command and return result"""
         response = actions.user.private_cursorless_run_rpc_command_get(
             CURSORLESS_COMMAND_ID,
