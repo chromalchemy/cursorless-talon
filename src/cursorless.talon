@@ -3,6 +3,11 @@ mode: user.cursorless_spoken_form_test
 tag: user.cursorless
 -
 
+(cursorless | cursor less) (reference | live (cheatsheet | cheat sheet)): 
+    user.switcher_focus("Chrome")
+    browser.go("https://www.cursorless.org/cheatsheet")
+
+
 <user.cursorless_action_or_ide_command> <user.cursorless_target>:
     user.private_cursorless_action_or_ide_command(cursorless_action_or_ide_command, cursorless_target)
 
