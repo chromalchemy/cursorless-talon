@@ -194,7 +194,8 @@
       "skis": "backtickQuotes",
       "box": "squareBrackets",
       "twin": "singleQuotes",
-      "comment round": "commentedParentheses"
+      "comment round": "commentedParentheses",
+      "set": "cljSet"
     }
   },
   "special_marks.csv": {
