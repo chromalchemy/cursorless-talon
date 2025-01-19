@@ -3,7 +3,9 @@ from talon import Context, actions
 ctx = Context()
 
 ctx.matches = r"""
-app: vscode
+app.name: Code
+app.name: Cursor
+app.name: Windsurf
 """
 
 ctx.tags = ["user.cursorless"]
