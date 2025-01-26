@@ -6,6 +6,9 @@ ctx.matches = r"""
 app.name: Code
 app.name: Cursor
 app.name: Windsurf
+# Disable Cursorless when VS Code is displaying a native OS dialog during which the command server
+# hotkey will not work.
+not win.title: /^(Open Folder|Open File|Save As|Open Workspace from File|Add Folder to Workspace|Save Workspace)$/i
 """
 
 ctx.tags = ["user.cursorless"]
