@@ -11,3 +11,4 @@ and tag: user.cursorless_use_community_snippets
 
 {user.snippet_wrapper} {user.cursorless_wrap_action} <user.cursorless_target>:
     user.private_cursorless_wrap_with_community_snippet(snippet_wrapper, cursorless_target)
+
