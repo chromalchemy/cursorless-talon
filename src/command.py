@@ -41,6 +41,13 @@ class Actions:
         if "fallback" in response:
             perform_fallback(response["fallback"])
 
+    def private_cursorless_command_and_wait_extra(action: dict):
+        """Execute cursorless command and wait for it to finish"""
+        actions.user.private_cursorless_run_rpc_command_and_wait(
+            CURSORLESS_COMMAND_ID,
+            construct_cursorless_command(action),
+        )
+
     @staticmethod
     def private_cursorless_command_no_wait(action: dict):
         """Execute cursorless command without waiting"""
