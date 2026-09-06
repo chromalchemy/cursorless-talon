@@ -40,6 +40,7 @@ paired_delimiters = {
     "singleQuotes": ["'", "'"],
     "any": ["", ""],
     "commentedParentheses": ["#_(", ")"],
+    "cljSet": ["#{", "}"],
 }
 
 
