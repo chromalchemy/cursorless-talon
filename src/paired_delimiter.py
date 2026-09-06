@@ -39,6 +39,7 @@ paired_delimiters = {
     "squareBrackets": ["[", "]"],
     "singleQuotes": ["'", "'"],
     "any": ["", ""],
+    "commentedParentheses": ["#_(", ")"],
 }
 
 
