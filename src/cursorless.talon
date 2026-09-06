@@ -20,7 +20,11 @@ tag: user.cursorless
 {user.cursorless_paste_action} <user.cursorless_destination>:
     user.private_cursorless_paste(cursorless_destination)
 
-{user.cursorless_reformat_action} <user.formatters> at <user.cursorless_target>:
+# {user.cursorless_reformat_action} <user.formatters> at <user.cursorless_target>:
+#     user.cursorless_reformat(cursorless_target, formatters)
+
+#andreas style format command
+<user.formatters> form <user.cursorless_target>:
     user.cursorless_reformat(cursorless_target, formatters)
 
 {user.cursorless_call_action} <user.cursorless_target> on <user.cursorless_target>:
